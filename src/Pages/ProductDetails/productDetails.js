@@ -18,7 +18,12 @@ const ProductDetails = () => {
             }
         </div>
         {
-            <BookingModal></BookingModal>
+            productCategories.map(product=><BookingModal
+            
+                    key={product._id}
+                    product={product}
+                    
+            ></BookingModal>)
         }
        </section>
     );

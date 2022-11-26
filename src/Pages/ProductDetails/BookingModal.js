@@ -1,6 +1,8 @@
 import React from 'react';
 
-const BookingModal = () => {
+const BookingModal = ({product}) => {
+    const{img,product_name,original_price,resale_price,seller_name,use_time,location}= product;
+
     return (
         <div>
             <>
@@ -11,7 +13,9 @@ const BookingModal = () => {
         <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <h3 className="text-lg font-bold"></h3>
         <form  className='grid grid-cols-1 gap-3 mt-6'>
-            <input type="text"  className="input w-full input-bordered " disabled />
+            <h2 className="text-lg font-bold">{product_name}</h2>
+            
+            <input  type="text" defaultValue={resale_price}  className="input w-full input-bordered " disabled />
            
             <input name='name' type="text"  placeholder="Your Name" className="input w-full input-bordered " disabled />
             <input name='email'  type="email" placeholder="Email" className="input w-full input-bordered " readOnly />
