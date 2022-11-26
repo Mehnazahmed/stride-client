@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSignUp = (data) => {
         console.log(data);
         setSignUpError('');
-        createUser(data.email, data.passwordg)
+        createUser(data.email, data.password, data.userType)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -29,7 +29,7 @@ const Signup = () => {
                 }
                  updateUser(userInfo)
                    .then(() => {
-                         saveUser(data.name,data.email);
+                         saveUser(data.name,data.email,data.userType);
                      })
                      .catch(err => console.log(err))
 
@@ -64,7 +64,7 @@ const Signup = () => {
                 <h2 className='text-4xl text-center' >Sign up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)} >
 
-                    
+
                     <div className="form-control w-full max-w-xs ">
                         <label className="label"><span className="label-text">Name</span></label>
                         <input type='text' {...register("name", {
@@ -95,12 +95,11 @@ const Signup = () => {
 
                         <label className="label"><span className="label-text">Forget Password?</span></label>
                     </div>
-                    <div >
-                    <input type="radio" id="html" name="user_type" value="user"/>
-                       <label for="html">User</label><br/>
-                      <input type="radio" id="css" name="user_type" value="seller"/>
-                        <label for="css">Seller</label><br/>
-                     </div>
+                    <select {...register("userType")}>
+                     <option value="user">user</option>
+                     <option value="seller">Seller</option>
+                      
+                     </select>
 
                     <input className='btn btn-accent w-full my-5' value='Sign Up' type="submit" />
                     {signUpError && <p className='text-red-500'>{signUpError}</p>}
@@ -109,7 +108,13 @@ const Signup = () => {
                 <div className='divider'>OR</div>
                 <button className='btn btn outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
+
+
+
+            
         </div>
+
+        
     );
 };
 

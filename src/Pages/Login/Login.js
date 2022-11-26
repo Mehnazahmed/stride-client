@@ -93,7 +93,7 @@ const Login = () => {
                         {loginError && <p>{loginError}</p>}
                     </div>
                 </form>
-                <p>New to Doctor's Portal  <Link className='text-secondary' to='/signup'>  Create New Account</Link></p>
+                <p>New to this site? <Link className='text-secondary' to='/signup'>  Create New Account</Link></p>
                 <div className='divider'>OR</div>
                 <button onClick={handleGoogleSignIn} className='btn btn outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
