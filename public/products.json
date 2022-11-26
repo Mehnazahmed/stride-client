@@ -1,0 +1,165 @@
+
+[
+    {
+       "category_id":"1",
+       "category_name":"iPhone",
+       "product_name":"iPhone 13pro",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/3412-99641.jpg",
+       "original_price":"118000৳",
+       "resale_price":"80000৳",
+       "use_time":"1year",
+       "location":"Gulshan-2,Dhaka",
+       "seller_name":"Rubaida"
+
+       
+    },
+    
+    {
+       "category_id":"1",
+       "category_name":"iPhone",
+       "product_name":"iPhone 14",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Midnight-4715.jpg",
+       "original_price":"92000৳",
+       "resale_price":"50000৳",
+       "use_time":"1year",
+       "location":"Gulshan-1,Dhaka",
+       "seller_name":"Adiyaan"
+
+       
+    },
+    
+    {
+       "category_id":"1",
+       "category_name":"iPhone",
+       "product_name":"iPhone 13Pro Max",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/3413-94883.jpg",
+       "original_price":"127000৳",
+       "resale_price":"90000৳",
+       "use_time":"6 months",
+       "location":"Mirpur-10,Dhaka",
+       "seller_name":"Nihan"
+
+       
+    },
+    
+    {
+       "category_id":"2",
+       "category_name":"Samsung",
+       "product_name":"Samsung Galaxy A52s 5G",
+       "img":"https://switchsolution.com.my/whoalsos/2021/04/0016198_samsung-galaxy-a52-8gb-ram-256gb-rom-original-samsung-malaysia-600x600.png",
+       "original_price":"50000৳",
+       "resale_price":"25000৳",
+       "use_time":"6 months",
+       "location":"Mirpur-1,Dhaka",
+       "seller_name":"Rahat"
+
+       
+    },
+    
+    {
+       "category_id":"2",
+       "category_name":"Samsung",
+       "product_name":"Samsung Galaxy A52",
+       "img":"https://diamu.com.bd/wp-content/uploads/2021/04/Samsung-Galaxy-A52-6.jpg",
+       "original_price":"39000৳",
+       "resale_price":"20000৳",
+       "use_time":"10 months",
+       "location":"Kollanpur,Dhaka",
+       "seller_name":"Reem"
+
+       
+    },
+    {
+       "category_id":"2",
+       "category_name":"Samsung",
+       "product_name":"Samsung Galaxy M53 5G",
+       "img":"https://www.mobiledokan.com/wp-content/uploads/2022/07/Samsung-Galaxy-M53-5G.jpg",
+       "original_price":"53000৳",
+       "resale_price":"48000৳",
+       "use_time":"3 months",
+       "location":"Banani,Dhaka",
+       "seller_name":"Mehran"
+
+       
+    },
+    {
+       "category_id":"3",
+       "category_name":"OnePlus",
+       "product_name":"OnePlus 9RT 5G",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/Hacker_Black-7361.jpg",
+       "original_price":"44000৳",
+       "resale_price":"35000৳",
+       "use_time":"6 months",
+       "location":"Badda,Dhaka",
+       "seller_name":"Tisha"
+
+       
+    },
+    {
+       "category_id":"3",
+       "category_name":"OnePlus",
+       "product_name":"OnePlus 10T 5G",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/OnePlus-10T-5G-Jade-Green-5412.jpg",
+       "original_price":"71000৳",
+       "resale_price":"60000৳",
+       "use_time":"1 year",
+       "location":"Shantinagar,Dhaka",
+       "seller_name":"Emee"
+
+       
+    },
+    {
+       "category_id":"3",
+       "category_name":"OnePlus",
+       "product_name":"OnePlus 10R 5G",
+       "img":"https://adminapi.applegadgetsbd.com/storage/media/large/5299-94476.jpg",
+       "original_price":"52000৳",
+       "resale_price":"40000৳",
+       "use_time":"1 year",
+       "location":"Mirpur DOHS,Dhaka",
+       "seller_name":"Labib"
+
+       
+    },
+    
+    {
+       "category_id":"4",
+       "category_name":"Xiaomi",
+       "product_name":"Xiaomi Redmi Note 10",
+       "img":"https://www.mobiledokan.com/wp-content/uploads/2021/03/Xiaomi-Redmi-Note-10-image.jpg",
+       "original_price":"22,999৳",
+       "resale_price":"15000৳",
+       "use_time":"6 months",
+       "location":"Mirpur-2,Dhaka",
+       "seller_name":"Noor"
+
+       
+    },
+    {
+       "category_id":"4",
+       "category_name":"Xiaomi",
+       "product_name":"Xiaomi 11i Hypercharge 5G",
+       "img":"https://www.mobiledokan.com/wp-content/uploads/2022/04/Xiaomi-11i-Hypercharge-5G.jpg",
+       "original_price":"42999৳",
+       "resale_price":"25000৳",
+       "use_time":"1 year",
+       "location":"Mirpur-1,Dhaka",
+       "seller_name":"Tiana"
+
+       
+    },
+    {
+       "category_id":"4",
+       "category_name":"Xiaomi",
+       "product_name":"Xiaomi 11T",
+       "img":"https://www.mobiledokan.com/wp-content/uploads/2021/12/Xiaomi-11T-image.jpg",
+       "original_price":"53999৳",
+       "resale_price":"35000৳",
+       "use_time":"6 months",
+       "location":"Rampura,Dhaka",
+       "seller_name":"Liba"
+
+       
+    }
+    
+]
