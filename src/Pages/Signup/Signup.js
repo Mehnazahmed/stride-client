@@ -39,8 +39,8 @@ const Signup = () => {
                 setSignUpError(error.message)
             });
 
-             const saveUser = (name,email)=>{
-                 const user ={name,email};
+             const saveUser = (name,email,userType)=>{
+                 const user ={name,email,userType};
                  fetch('http://localhost:5000/users',{
                      method: 'POST',
                     headers: {
@@ -96,7 +96,7 @@ const Signup = () => {
                         <label className="label"><span className="label-text">Forget Password?</span></label>
                     </div>
                     <select {...register("userType")}>
-                     <option value="user">user</option>
+                     <option value="user">User</option>
                      <option value="seller">Seller</option>
                       
                      </select>
