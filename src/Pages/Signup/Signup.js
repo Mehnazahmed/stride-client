@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSignUp = (data) => {
         console.log(data);
         setSignUpError('');
-        createUser(data.email, data.password)
+        createUser(data.email, data.passwordg)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -27,11 +27,11 @@ const Signup = () => {
                 const userInfo = {
                     displayName: data.name
                 }
-                // updateUser(userInfo)
-                //     .then(() => {
-                //         saveUser(data.name,data.email);
-                //     })
-                //     .catch(err => console.log(err))
+                 updateUser(userInfo)
+                   .then(() => {
+                         saveUser(data.name,data.email);
+                     })
+                     .catch(err => console.log(err))
 
             })
             .catch(error => {
@@ -39,21 +39,21 @@ const Signup = () => {
                 setSignUpError(error.message)
             });
 
-            // const saveUser = (name,email)=>{
-            //     const user ={name,email};
-            //     fetch('https://m-77-server.vercel.app/users',{
-            //         method: 'POST',
-            //         headers: {
-            //             'content-type':'application/json'
-            //         },
-            //         body: JSON.stringify(user)
-            //     })
-            //     .then(res=>res.json())
-            //     .then(data=>{
+             const saveUser = (name,email)=>{
+                 const user ={name,email};
+                 fetch('http://localhost:5000/users',{
+                     method: 'POST',
+                    headers: {
+                        'content-type':'application/json'
+                    },
+                     body: JSON.stringify(user)
+                 })
+                 .then(res=>res.json())
+                .then(data=>{
                     
-            //         setCreatedUserEmail(email)
-            //     })
-            // }
+                    setCreatedUserEmail(email)
+                 })
+             }
     }
 
     
@@ -64,7 +64,7 @@ const Signup = () => {
                 <h2 className='text-4xl text-center' >Sign up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)} >
 
-
+                    
                     <div className="form-control w-full max-w-xs ">
                         <label className="label"><span className="label-text">Name</span></label>
                         <input type='text' {...register("name", {
@@ -95,6 +95,12 @@ const Signup = () => {
 
                         <label className="label"><span className="label-text">Forget Password?</span></label>
                     </div>
+                    <div >
+                    <input type="radio" id="html" name="user_type" value="user"/>
+                       <label for="html">User</label><br/>
+                      <input type="radio" id="css" name="user_type" value="seller"/>
+                        <label for="css">Seller</label><br/>
+                     </div>
 
                     <input className='btn btn-accent w-full my-5' value='Sign Up' type="submit" />
                     {signUpError && <p className='text-red-500'>{signUpError}</p>}
