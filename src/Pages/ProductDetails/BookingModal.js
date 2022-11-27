@@ -17,6 +17,7 @@ const BookingModal = ({product}) => {
         const booking = {
             
             name: name,
+            product:product_name,
             email,
             phone,
             price:resale_price

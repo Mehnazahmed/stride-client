@@ -1,9 +1,11 @@
 import DashboardLayout from "../../layout/DashboardLayout";
 import Main from "../../layout/Main/Main";
+import AllBuyers from "../../Pages/AllBuyers/AllBuyers";
 import Blog from "../../Pages/Blog/Blog";
-import BookNow from "../../Pages/BookNow/BookNow";
+
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import MyBookings from "../../Pages/MyBookings/MyBookings";
 import ProductDetails from "../../Pages/ProductDetails/ProductDetails";
 import Signup from "../../Pages/Signup/Signup";
 import DisplayError from "../../Shared/DisplayError/DisplayError";
@@ -44,19 +46,24 @@ const router =createBrowserRouter([
             }
             
         ]
-    }
-    // {
-    //     path: '/dashboard',
-    //     element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
-    //     errorElement:<DisplayError></DisplayError>,
-    //     children: [
-    //         {
-    //             path: '/dashboard',
-    //             element: <BookNow></BookNow>
-    //         },
+    },
+    {
+        path: '/dashboard',
+         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+         errorElement:<DisplayError></DisplayError>,
+         children: [
+            {
+                path: '/dashboard',
+                element: <MyBookings></MyBookings>
+            },
+            {
+                path:'/dashboard/allbuyers',
+                element: <AllBuyers></AllBuyers>
+
+            }
             
             
-    //     ]
-    // }
+         ]
+     }
 ])
 export default router;
