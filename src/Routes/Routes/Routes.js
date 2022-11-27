@@ -11,6 +11,7 @@ import MyBookings from "../../Pages/MyBookings/MyBookings";
 import ProductDetails from "../../Pages/ProductDetails/ProductDetails";
 import Signup from "../../Pages/Signup/Signup";
 import DisplayError from "../../Shared/DisplayError/DisplayError";
+import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
  
 
@@ -60,17 +61,17 @@ const router =createBrowserRouter([
             },
             {
                 path:'/dashboard/users',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
 
             },
             {
                 path:'/dashboard/buyers',
-                element: <AllBuyers></AllBuyers>
+                element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
 
             },
             {
                 path:'/dashboard/sellers',
-                element: <AllSellers></AllSellers>
+                element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
 
             }
             
