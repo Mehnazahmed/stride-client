@@ -20,6 +20,7 @@ const Categories = () => {
                 productCategories.map(category=><div
                 key={category._id}
                 category={category}
+
                 >
                     <Link to={`/category/${category.category_id}`}>{category.category_name}</Link>
                 </div>)
