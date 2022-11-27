@@ -44,19 +44,19 @@ const router =createBrowserRouter([
             }
             
         ]
-    },
-    {
-        path: '/dashboard',
-        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
-        errorElement:<DisplayError></DisplayError>,
-        children: [
-            {
-                path: '/dashboard',
-                element: <BookNow></BookNow>
-            },
-            
-            
-        ]
     }
+    // {
+    //     path: '/dashboard',
+    //     element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+    //     errorElement:<DisplayError></DisplayError>,
+    //     children: [
+    //         {
+    //             path: '/dashboard',
+    //             element: <BookNow></BookNow>
+    //         },
+            
+            
+    //     ]
+    // }
 ])
 export default router;
