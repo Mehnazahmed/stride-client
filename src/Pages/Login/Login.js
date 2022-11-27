@@ -1,6 +1,6 @@
 import React, {  useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
+import useToken from '../../hooks/useToken';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
@@ -13,12 +13,15 @@ const Login = () => {
     const [userEmail, setUserEmail] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
     const [loginError, setLoginError] = useState('');
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || '/';
 
-    
+    if(token){
+        navigate(from,{replace: true});
+    }
 
     const handleLogin = data => {
         console.log(data)
