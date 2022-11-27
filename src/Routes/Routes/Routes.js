@@ -1,6 +1,7 @@
 import DashboardLayout from "../../layout/DashboardLayout";
 import Main from "../../layout/Main/Main";
 import AllBuyers from "../../Pages/AllBuyers/AllBuyers";
+import AllUsers from "../../Pages/AllUsers/AllUsers";
 import Blog from "../../Pages/Blog/Blog";
 
 import Home from "../../Pages/Home/Home";
@@ -57,7 +58,12 @@ const router =createBrowserRouter([
                 element: <MyBookings></MyBookings>
             },
             {
-                path:'/dashboard/allbuyers',
+                path:'/dashboard/users',
+                element: <AllUsers></AllUsers>
+
+            },
+            {
+                path:'/dashboard/buyers',
                 element: <AllBuyers></AllBuyers>
 
             }
