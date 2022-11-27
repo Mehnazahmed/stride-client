@@ -30,16 +30,13 @@ const AllUsers = () => {
     }
     return (
         <div>
-            <h2 className='text-3xl'>All Users</h2>
+            
             <table className="table w-full">
     
     <thead>
       <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Treatment</th>
-        <th>Admin</th>
-        <th>Delete</th>
+        <th><h2 className='text-3xl text-center'>All Users</h2></th>
+        
       </tr>
     </thead>
     <tbody>

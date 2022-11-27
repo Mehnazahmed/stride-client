@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
-const AllBuyers = () => {
-    const {data: buyers=[], refetch}=useQuery({
-        queryKey: ['buyers'],
+const AllSellers = () => {
+    const {data: sellers=[], refetch}=useQuery({
+        queryKey: ['sellers'],
         queryFn: async()=>{
-            const res = await fetch('http://localhost:5000/buyers');
+            const res = await fetch('http://localhost:5000/sellers');
             const data = await res.json();
             return data;
         }
@@ -19,7 +19,7 @@ const AllBuyers = () => {
     
     <thead>
       <tr>
-        <th><h2 className='text-3xl text-center'>All Buyers</h2></th>
+        <th><h2 className='text-3xl text-center'>All Sellers</h2></th>
         
       </tr>
     </thead>
@@ -38,11 +38,11 @@ const AllBuyers = () => {
     <tbody>
       
       {
-        buyers.map((buyer,i)=> <tr key={buyer._id }>
+        sellers.map((seller,i)=> <tr key={seller._id }>
         <th>{i+1}</th>
-        <td>{buyer.name}</td>
-        <td>{buyer.email}</td>
-        <td>{buyer.role}</td>
+        <td>{seller.name}</td>
+        <td>{seller.email}</td>
+        <td>{seller.role}</td>
         
         <td><button className='btn btn-xs btn-danger'>Delete</button></td>
       </tr>)
@@ -57,4 +57,4 @@ const AllBuyers = () => {
     );
 };
 
-export default AllBuyers;
+export default AllSellers;
