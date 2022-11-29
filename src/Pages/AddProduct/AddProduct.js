@@ -13,17 +13,18 @@ const AddProduct = () => {
     const navigate = useNavigate();
 
     const handleAddProduct = data => {
-
+       console.log(data.image[0])
         const image = data.image[0];
         const formData = new FormData();
-        formData.append('img', image);
-        const url = `https://api.imgbb.com/1/upload?${imageHostKey}`
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
         fetch(url, {
             method: 'POST',
             body: formData
         })
             .then(res => res.json())
             .then(imgData => {
+                console.log(imgData)
                 if (imgData.success) {
                     console.log(imgData.data.url);
                     const product = {
@@ -39,14 +40,14 @@ const AddProduct = () => {
 
 
 
-                    }
+                     }
 
                     // save product information to the database
                      fetch('http://localhost:5000/addedproducts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
-                            authorization: `bearer ${localStorage.getItem('accessToken')}`
+                             authorization: `bearer ${localStorage.getItem('accessToken')}`
                         },
                         body: JSON.stringify(product)
                     })
@@ -58,7 +59,7 @@ const AddProduct = () => {
                         })
 
                 }
-            })
+         })
 
     }
 
@@ -136,11 +137,11 @@ const AddProduct = () => {
                 
                 <div className="form-control w-full max-w-xs ">
                     <label className="label"><span className="label-text">Photo</span></label>
-                    <input type='file' {...register("img", {
+                    <input type='file' {...register("image", {
                         required: "photo is required"
                     })}
                         className='input input-bordered w-full max-w-xs' />
-                    {errors.img && <p className='text-red-600'>{errors.img?.message}</p>}
+                    {errors.image && <p className='text-red-600'>{errors.image?.message}</p>}
 
                 </div>
 
