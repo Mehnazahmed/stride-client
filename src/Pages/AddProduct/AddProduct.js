@@ -43,7 +43,7 @@ const AddProduct = () => {
                      }
 
                     // save product information to the database
-                     fetch('http://localhost:5000/addedproducts', {
+                     fetch('https://y-orpin-psi.vercel.app/addedproducts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -55,7 +55,7 @@ const AddProduct = () => {
                         .then(result => {
                             console.log(result);
                             toast.success(`${data.product_name} is added successfully`);
-                            navigate('/')
+                            navigate('/dashboard/myproducts')
                         })
 
                 }

@@ -6,7 +6,7 @@ const Categories = () => {
     const {data:productCategories=[]}=useQuery({
         queryKey: ['pCategories'],
         queryFn: async()=>{
-            const res = await fetch('http://localhost:5000/pCategories');
+            const res = await fetch('https://y-orpin-psi.vercel.app/pCategories');
             const data = await res.json();
             return data;
         }

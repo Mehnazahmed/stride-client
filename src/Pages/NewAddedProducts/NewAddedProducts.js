@@ -13,7 +13,7 @@ const NewAddedProducts = () => {
         queryKey: ['addedProducts'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/addedproducts', {
+                const res = await fetch('https://y-orpin-psi.vercel.app/addedproducts', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }

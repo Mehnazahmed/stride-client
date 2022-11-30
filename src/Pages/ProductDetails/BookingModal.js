@@ -23,7 +23,7 @@ const BookingModal = ({product}) => {
             price:resale_price
 
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://y-orpin-psi.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

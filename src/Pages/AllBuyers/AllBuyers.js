@@ -5,7 +5,7 @@ const AllBuyers = () => {
     const {data: buyers=[], refetch}=useQuery({
         queryKey: ['buyers'],
         queryFn: async()=>{
-            const res = await fetch('http://localhost:5000/buyers');
+            const res = await fetch('https://y-orpin-psi.vercel.app/buyers');
             const data = await res.json();
             return data;
         }

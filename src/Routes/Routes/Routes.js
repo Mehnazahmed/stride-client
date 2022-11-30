@@ -9,11 +9,13 @@ import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import MyBookings from "../../Pages/MyBookings/MyBookings";
+import NewAddedProducts from "../../Pages/NewAddedProducts/NewAddedProducts";
 import ProductDetails from "../../Pages/ProductDetails/ProductDetails";
 import Signup from "../../Pages/Signup/Signup";
 import DisplayError from "../../Shared/DisplayError/DisplayError";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SellerRoute from "../SellerRoute/SellerRoute";
  
 
 
@@ -41,7 +43,7 @@ const router =createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <ProductDetails></ProductDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-orpin-psi.vercel.app/category/${params.id}`)
 
             },
             {
@@ -62,6 +64,10 @@ const router =createBrowserRouter([
                 element: <MyBookings></MyBookings>
             },
             {
+                path: '/dashboard/myproducts',
+                element: <SellerRoute><NewAddedProducts></NewAddedProducts></SellerRoute>
+            },
+            {
                 path: '/dashboard/addproduct',
                 element: <AddProduct></AddProduct>
             },
@@ -77,7 +83,7 @@ const router =createBrowserRouter([
             },
             {
                 path:'/dashboard/sellers',
-                element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
+                element: <AdminRoute><AllSellers></AllSellers></AdminRoute>
 
             }
             
