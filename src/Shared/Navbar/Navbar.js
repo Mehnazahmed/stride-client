@@ -17,7 +17,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
        
-        <li><Link to='/addproduct'>Add Product</Link></li>
+        <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
          {user?.uid ?
             <>
                 <li><Link to='/dashboard'>Dashboard</Link></li>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <Link to='/' className="btn btn-ghost normal-case text-xl">Second Hand <span className=''>Phone Shop</span></Link>
+            <Link to='/' className="btn btn-ghost normal-case text-3xl font-bold">Second Hand  <span className='text-cyan-800 hover:text-cyan-600'> - Phone Shop</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">

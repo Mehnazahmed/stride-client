@@ -48,10 +48,7 @@ const router =createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog> 
             },
-            {
-                path: '/addproduct',
-                element: <AddProduct></AddProduct>
-            }
+            
             
         ]
     },
@@ -63,6 +60,10 @@ const router =createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyBookings></MyBookings>
+            },
+            {
+                path: '/dashboard/addproduct',
+                element: <AddProduct></AddProduct>
             },
             {
                 path:'/dashboard/users',

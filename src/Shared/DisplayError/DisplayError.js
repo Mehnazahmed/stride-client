@@ -18,11 +18,12 @@ const DisplayError = () => {
 
     return (
         <div>
-            <p className='text-red-500'>Something went wrong!!!!</p>
-            <p className='text-red-400'>{ }</p>
-            <h4 className='text-3xl'><button onClick={handleLogOut}>Sign out</button> And log back in</h4>
+        <p className='text-red-500'>Something went wrong!!!!</p>
+        <h4 className='text-3xl'><button onClick={handleLogOut}>Sign out</button> And log back in</h4>
+        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-template-3.png" alt="404 page not found" />
+        
 
-        </div>
+    </div>
     );
 };
 
