@@ -5,18 +5,16 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCg5vOXyxJuKkKxFT7KMj4xP3Zmwtn9Us",
-  authDomain: "assignment-12-d1455.firebaseapp.com",
-  projectId: "assignment-12-d1455",
-  storageBucket: "assignment-12-d1455.appspot.com",
-  messagingSenderId: "184620142728",
-  appId: "1:184620142728:web:eb3bea6d67bfc51a6f0f3d"
+  apiKey: "AIzaSyCirw0JS5ItSSwGi7IpOu6tU9wvxPQIO9k",
+  authDomain: "project-s-cfba1.firebaseapp.com",
+  projectId: "project-s-cfba1",
+  storageBucket: "project-s-cfba1.appspot.com",
+  messagingSenderId: "233096286530",
+  appId: "1:233096286530:web:622d5fda1797f5d4e438db",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export default app;
 
 // apiKey: process.env.REACT_APP_apiKey,
 // authDomain: process.env.REACT_APP_authDomain,
@@ -24,3 +22,4 @@ export default app;
 // storageBucket: process.env.REACT_APP_storageBucket,
 // messagingSenderId: process.env.REACT_APP_messagingSenderId,
 // appId: process.env.REACT_APP_appId
+export default app;

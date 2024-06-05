@@ -1,22 +1,20 @@
 import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
-import useAdmin from "../hooks/useAdmin";
 
 import Navbar from "../Shared/Navbar/Navbar";
 import Loading from "../Shared/Loading/Loading";
 
-const DashboardLayout = () => {
+const UserDashboardLayout = () => {
   const { user } = useContext(AuthContext);
-  const [isAdmin, isAdminLoading] = useAdmin(user?.email);
 
-  if (isAdminLoading) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  //   if (user) {
+  //     return (
+  //       <div>
+  //         <Loading />
+  //       </div>
+  //     );
+  //   }
 
   return (
     <div>
@@ -28,14 +26,14 @@ const DashboardLayout = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboardDrawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 text-base-content">
-            {isAdmin && (
+          <ul className="menu p-4 w-80 text-base-content mt-10">
+            {user && (
               <>
                 <li>
-                  <Link to="/dashboard">All Users</Link>
+                  <Link to="/userDashboard/userProfile">My Profile</Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/userBookings">All Bookings</Link>
+                  <Link to="/userDashboard/mybookings">My Bookings</Link>
                 </li>
               </>
             )}
@@ -46,4 +44,4 @@ const DashboardLayout = () => {
   );
 };
 
-export default DashboardLayout;
+export default UserDashboardLayout;
